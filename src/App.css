@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Special Elite", cursive;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
