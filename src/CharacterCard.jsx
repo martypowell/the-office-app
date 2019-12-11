@@ -11,6 +11,12 @@ const CharacterCard = ({ name, title, description, giphy, image }) => (
   </div>
 );
 
-CharacterCard.propTypes = {};
+CharacterCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  giphy: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired
+};
 
 export default CharacterCard;
