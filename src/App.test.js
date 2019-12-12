@@ -23,6 +23,10 @@ test("renders learn react link", async () => {
   axios.get.mockResolvedValue(resp);
   const { getByText } = render(<App />);
 
+  // Expect a loading message
+  expect(getByText(/Loading.*.../i)).toBeInTheDocument();
+
+  // Expect Dynamic Data To Appear once ajax request is done
   const popularCharacter1 = await waitForElement(() =>
     getByText(/Michael Scott/i)
   );
