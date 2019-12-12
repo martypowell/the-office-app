@@ -8,7 +8,7 @@ import axios from "axios";
 const GetPopularCharacters = (limit = 0) =>
   axios
     .get("../data/character.json")
-    .then(resp => resp.data)
+    .then(({ data }) => data)
     .then(characters => (limit ? characters.slice(0, limit) : characters));
 
 export { GetPopularCharacters };
