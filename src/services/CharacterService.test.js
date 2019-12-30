@@ -16,6 +16,7 @@ describe("Get Popular Characters", () => {
       expect(characters).toEqual(mockCharacters)
     );
   });
+
   test("should return return the most popular character if a limit of 1 is specified", () => {
     const mockCharacters = [
       { name: "Michael Scott" },
