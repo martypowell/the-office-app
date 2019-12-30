@@ -30,4 +30,6 @@ test("renders learn react link", async () => {
   await waitForElement(() => getByText(/Michael Scott/i));
   await waitForElement(() => getByText(/Dwight Schrute/i));
   await waitForElement(() => getByText(/Jim Halpert/i));
+
+  expect(getByText(/vote now/i)).toBeInTheDocument();
 });

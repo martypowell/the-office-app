@@ -1,17 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./App.scss";
 import CharacterCard from "./components/CharacterCard";
-import { GetPopularCharacters } from "./services/CharacterService";
+import useCharacters from "./hooks/useCharacters";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [characters, setCharacters] = useState([]);
-
-  useEffect(() => {
-    GetPopularCharacters()
-      .then(setCharacters)
-      .then(() => setIsLoading(false));
-  }, []);
+  const { isLoading, characters } = useCharacters();
 
   return (
     <div className="App">
@@ -29,6 +22,11 @@ function App() {
             ))}
           </div>
         )}
+      </div>
+      <div className="">
+        <a href="/vote" className="btn btn-primary">
+          Vote Now
+        </a>
       </div>
     </div>
   );
