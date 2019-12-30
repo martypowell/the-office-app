@@ -27,16 +27,7 @@ test("renders learn react link", async () => {
   expect(getByText(/Loading.*.../i)).toBeInTheDocument();
 
   // Expect Dynamic Data To Appear once ajax request is done
-  const popularCharacter1 = await waitForElement(() =>
-    getByText(/Michael Scott/i)
-  );
-  const popularCharacter2 = await waitForElement(() =>
-    getByText(/Dwight Schrute/i)
-  );
-  const popularCharacter3 = await waitForElement(() =>
-    getByText(/Jim Halpert/i)
-  );
-  expect(popularCharacter1).toBeInTheDocument();
-  expect(popularCharacter2).toBeInTheDocument();
-  expect(popularCharacter3).toBeInTheDocument();
+  await waitForElement(() => getByText(/Michael Scott/i));
+  await waitForElement(() => getByText(/Dwight Schrute/i));
+  await waitForElement(() => getByText(/Jim Halpert/i));
 });
