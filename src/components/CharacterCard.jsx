@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const CharacterCard = ({ name, title, description, giphy, image }) => (
+const CharacterCard = ({ name, title, image }) => (
   <div className="card card--character">
     <h3>{name}</h3>
     <p>{title}</p>
@@ -16,8 +16,6 @@ const CharacterCard = ({ name, title, description, giphy, image }) => (
 CharacterCard.propTypes = {
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  giphy: PropTypes.string,
   image: PropTypes.string.isRequired
 };
 
